@@ -1,103 +1,243 @@
-Cyclistic Bike-Share Analysis
-Project Overview 
+# 🚴 Cyclistic Bike-Share Analysis
 
-This project was completed as part of the Google Data Analytics Professional Certificate Capstone.
+![SQL](https://img.shields.io/badge/SQL-BigQuery-blue)
+![Tableau](https://img.shields.io/badge/Tableau-Dashboard-orange)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-The objective was to analyze historical Cyclistic bike-share trip data to understand how annual members and casual riders use the service differently. Based on these insights, business recommendations were developed to support strategies for converting casual riders into annual members.
+## 📌 Executive Summary
 
-Business Task
+This project analyzes **420,649 historical bike-share trips** to understand behavioral differences between **annual members** and **casual riders**.
 
-Cyclistic's marketing team wants to increase annual memberships.
+Using **Google BigQuery (SQL)**, the data was cleaned, transformed, and analyzed before being visualized in **Tableau**. The findings were translated into business recommendations aimed at increasing annual memberships.
 
-The goal of this analysis is to answer the following business question:
+---
 
-How do annual members and casual riders use Cyclistic bikes differently?
+# 📖 Table of Contents
 
-Tools Used
-SQL (Google BigQuery)
-Tableau
-Google BigQuery
-Google Data Analytics methodology
-Dataset
-Cyclistic historical trip data
-Source: Divvy Bike Share
-Data provided for educational purposes through the Google Data Analytics Capstone
-Data Cleaning
+- [Business Problem](#-business-problem)
+- [Project Objectives](#-project-objectives)
+- [Dataset](#-dataset)
+- [Tools Used](#-tools-used)
+- [Project Workflow](#-project-workflow)
+- [Data Cleaning](#-data-cleaning)
+- [Exploratory Data Analysis](#-exploratory-data-analysis)
+- [Dashboard](#-dashboard)
+- [Key Findings](#-key-findings)
+- [Business Recommendations](#-business-recommendations)
+- [Repository Structure](#-repository-structure)
+- [Skills Demonstrated](#-skills-demonstrated)
 
-The following cleaning and transformation steps were performed in BigQuery:
+---
 
-Combined multiple monthly datasets into a single analytical table
-Removed invalid ride records
-Removed missing station information
-Removed records with missing rider type
-Created ride duration in minutes
-Extracted weekday from ride date
-Extracted month from ride date
-Analysis
+# 🎯 Business Problem
 
-The analysis focused on comparing annual members and casual riders across several dimensions:
+Cyclistic's marketing team aims to increase the number of annual memberships.
 
-Total ride count
-Average ride duration
-Day-of-week riding behavior
-Bike type preference
-Monthly riding trends
-Key Findings
-1. Members Ride More Frequently
+This analysis answers the following business question:
 
-Annual members completed approximately 322,000 rides, compared with approximately 98,000 rides by casual riders.
+> **How do annual members and casual riders use Cyclistic bikes differently?**
 
-2. Casual Riders Take Longer Trips
+---
 
-Average ride duration:
+# 🎯 Project Objectives
 
-Member: 9.98 minutes
-Casual: 16.80 minutes
+- Clean and prepare raw trip data
+- Analyze riding behaviour
+- Compare annual members with casual riders
+- Build an interactive Tableau dashboard
+- Deliver business recommendations using data
 
-This suggests members primarily use bikes for transportation or commuting, while casual riders are more likely to use bikes for leisure.
+---
 
-3. Riding Patterns Differ by Day
+# 📂 Dataset
 
-Members rode consistently throughout weekdays.
+| Item | Details |
+|------|---------|
+| Dataset | Cyclistic Bike Share Trips |
+| Source | Divvy Bike Share (Google Data Analytics Capstone) |
+| Records Analyzed | **420,649 rides** |
+| Storage | Google BigQuery |
 
-Casual riders showed clear increases on Fridays and Saturdays, indicating recreational usage.
+> **Note:** The dataset is provided for educational purposes through the Google Data Analytics Professional Certificate.
 
-4. Bike Preferences
+---
 
-Members frequently used both classic and electric bikes.
+# 🛠 Tools Used
 
-Casual riders showed slightly higher electric bike usage but spent considerably longer riding classic bikes.
+| Tool | Purpose |
+|------|---------|
+| Google BigQuery | Data Storage & SQL Analysis |
+| SQL | Data Cleaning & Analysis |
+| Tableau | Dashboard & Visualization |
+| GitHub | Version Control & Documentation |
 
-5. Seasonal Trend
+---
 
-Ride activity increased from January through March for both rider groups, suggesting seasonal demand growth.
+# 🔄 Project Workflow
 
+```text
+Raw Data
+     │
+     ▼
+Data Cleaning (SQL)
+     │
+     ▼
+Feature Engineering
+     │
+     ▼
+Exploratory Data Analysis
+     │
+     ▼
+Tableau Dashboard
+     │
+     ▼
 Business Recommendations
+```
 
-Based on the analysis, Cyclistic could consider:
+---
 
-Promoting annual memberships during weekends when casual rider activity peaks.
-Offering discounts to frequent casual riders.
-Developing commuter-focused membership campaigns.
-Marketing the long-term cost savings of annual memberships.
-Running seasonal membership promotions before peak riding months.
-Dashboard
+# 🧹 Data Cleaning
 
-The Tableau dashboard summarizes the major findings using interactive visualizations.
+The following transformations were performed in BigQuery:
 
-Included visualizations:
+- Combined multiple monthly datasets
+- Removed invalid ride durations
+- Removed incomplete records
+- Removed missing rider categories
+- Created ride duration (minutes)
+- Extracted weekday
+- Extracted ride month
+- Prepared a clean analytical dataset for Tableau
 
-Total Ride Count
-Average Ride Duration
-Day of Week Usage
-Bike Type Preference
+---
 
-Skills Demonstrated
-SQL
-Data Cleaning
-Data Transformation
-Data Analysis
-Business Intelligence
-Tableau Dashboard Development
-Data Storytelling
-Business Recommendations
+# 📊 Exploratory Data Analysis
+
+The analysis focused on answering the following questions:
+
+- How many rides were taken by each rider type?
+- Do casual riders travel longer distances?
+- Which weekdays are busiest?
+- Which bike types are preferred?
+- How does ride activity change by month?
+
+---
+
+# 📈 Dashboard
+
+### Tableau Dashboard
+
+> *(Insert your dashboard screenshot below after uploading it to GitHub.)*
+
+```markdown
+![Dashboard](Images/dashboard.png)
+```
+
+---
+
+# 🔍 Key Findings
+
+## 1️⃣ Members Ride More Frequently
+
+| Rider Type | Total Rides |
+|------------|------------:|
+| Member | **322,234** |
+| Casual | **98,415** |
+
+Members account for the majority of trips, indicating consistent usage throughout the observed period.
+
+---
+
+## 2️⃣ Casual Riders Take Longer Trips
+
+| Rider Type | Average Ride Duration |
+|------------|----------------------:|
+| Member | **9.98 minutes** |
+| Casual | **16.80 minutes** |
+
+Casual riders spend significantly more time per ride, suggesting leisure-oriented usage.
+
+---
+
+## 3️⃣ Riding Behaviour Differs by Day
+
+- Members ride consistently during weekdays.
+- Casual riders peak on **Fridays** and **Saturdays**.
+- Weekend activity is substantially higher among casual riders.
+
+---
+
+## 4️⃣ Bike Preference
+
+| Rider Type | Most Used Bike |
+|------------|----------------|
+| Member | Classic Bike |
+| Casual | Electric Bike (slightly higher usage) |
+
+Casual riders spend considerably longer riding classic bikes despite a slight preference for electric bikes.
+
+---
+
+## 5️⃣ Monthly Trend
+
+Ride activity increased steadily from **January through March** for both rider groups, indicating seasonal demand growth.
+
+---
+
+# 💡 Business Recommendations
+
+Based on the analysis:
+
+- Promote annual memberships during weekend peaks.
+- Highlight long-term savings of membership plans.
+- Launch commuter-focused membership campaigns.
+- Introduce seasonal promotions before peak riding months.
+- Target frequent casual riders with personalized offers.
+
+---
+
+# 📁 Repository Structure
+
+```text
+cyclistic-bike-share-analysis/
+│
+├── README.md
+├── SQL/
+│   └── cyclistic_analysis.sql
+│
+├── Dashboard/
+│   └── cyclistic_dashboard.twbx
+│
+├── Images/
+│   └── dashboard.png
+│
+└── LICENSE
+```
+
+---
+
+# 🚀 Skills Demonstrated
+
+- SQL
+- Google BigQuery
+- Data Cleaning
+- Data Transformation
+- Exploratory Data Analysis (EDA)
+- Data Visualization
+- Tableau Dashboard Development
+- Data Storytelling
+- Business Intelligence
+- Business Recommendations
+
+---
+
+## 👤 Author
+
+**Halartha**
+
+GitHub: https://github.com/halartha483-cmyk
+
+---
+
+⭐ If you found this project interesting, feel free to explore the repository and connect with me.
