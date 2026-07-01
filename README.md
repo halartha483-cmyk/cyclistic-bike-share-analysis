@@ -126,12 +126,11 @@ The analysis focused on answering the following questions:
 
 # 📈 Dashboard
 
-### Tableau Dashboard
-
-> *(Insert your dashboard screenshot below after uploading it to GitHub.)*
-
-```markdown
 ![Dashboard](Images/dashboard.png)
+
+📄 **SQL Script:** [cyclistic_analysis.sql](SQL/cyclistic_analysis.sql)
+
+📊 **Tableau Workbook:** [cyclistic_dashboard.twbx](Dashboard/cyclistic_dashboard.twbx)
 ```
 
 ---
