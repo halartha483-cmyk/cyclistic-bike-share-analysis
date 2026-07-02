@@ -126,7 +126,7 @@ The analysis focused on answering the following questions:
 
 # 📈 Dashboard
 
-![Dashboard](Images/dashboard.png)
+![Dashboard](dashboard.png)
 
 📄 **SQL Script:** [cyclistic_analysis.sql](SQL/cyclistic_analysis.sql)
 
